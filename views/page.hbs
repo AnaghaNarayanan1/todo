@@ -1,0 +1,46 @@
+<div class="container">
+<div class="container">
+    <div class="row">
+        {{#each data}}
+        <div class="col-md-3">
+            <div class="card">
+                <p class="card-title text-center">{{this.name}}</p>
+                <p>{{this.time}}</p>
+                <p>{{this.id}}</p>
+                <a href="/finished/{{this.id}}" class="btn btn-success">finished</a>
+                <a href="/aborted/{{this.id}}" class="btn btn-danger">aborted</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div class="row">
+{{#if data1}}
+<div class="col-md-4">
+<div class="card mt-2 p-3" style="width: 80%;">
+    <p class="card-title text-center text-success mt-2">finished</p>
+    {{#each data1}}
+    <p class="text-center">{{this.id}}.{{this.name}}.{{this.time}}</p>
+    {{/each}}
+    </div>
+</div>
+{{/if}}
+</div>
+<div class="row">
+    {{#if data2}}
+    <div class="col-md-4">
+        <div class="card mt-2 p-3" style="width: 80%;">
+    <p class="card-title text-center text-success mt-2">aborted</p>
+    {{#each data2}}
+    <p class="text-center">{{this.id}}.{{this.name}}.{{this.time}}</p>
+    {{/each}}
+    </div>
+</div>
+{{/if}}
+    </div>
+</div>
+</div> 
+
+
+
+
+
